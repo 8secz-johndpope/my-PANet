@@ -47,10 +47,12 @@ class VOC(BaseDataset):
         id_ = self.ids[idx]
         image = Image.open(os.path.join(self._image_dir, f'{id_}.jpg'))
         semantic_mask = Image.open(os.path.join(self._label_dir, f'{id_}.png'))
-        #instance_mask = Image.open(os.path.join(self._inst_dir, f'{id_}.png'))
-        #scribble_mask = Image.open(os.path.join(self._scribble_dir, f'{id_}.png'))
+        instance_mask = Image.open(os.path.join(self._inst_dir, f'{id_}.png'))
+        scribble_mask = Image.open(os.path.join(self._scribble_dir, f'{id_}.png'))
         sample = {'image': image,
-                  'label': semantic_mask}
+                  'label': semantic_mask,
+                  'inst': instance_mask,
+                  'scribble': scribble_mask}
 
         # Image-level transformation
         if self.transforms is not None:
