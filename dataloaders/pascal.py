@@ -47,8 +47,8 @@ class VOC(BaseDataset):
         id_ = self.ids[idx]
         image = Image.open(os.path.join(self._image_dir, f'{id_}.jpg'))
         semantic_mask = Image.open(os.path.join(self._label_dir, f'{id_}.png'))
-        instance_mask = Image.open(os.path.join(self._inst_dir, f'{id_}.png'))
-        scribble_mask = Image.open(os.path.join(self._scribble_dir, f'{id_}.png'))
+        instance_mask = Image.open(os.path.join(self._inst_dir, '2007_000033.png'))
+        scribble_mask = Image.open(os.path.join(self._scribble_dir, '2007_000033.png'))
         sample = {'image': image,
                   'label': semantic_mask,
                   'inst': instance_mask,
