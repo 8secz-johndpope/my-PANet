@@ -4,4 +4,5 @@ echo y | conda install -c conda-forge pycocotools
 pip install sacred
 pip install numpy==1.16.1
 chmod +x voc_align_1way_1shot_[train].sh
+cp -rf ../PANet/pretrained_model/ ./
 ./voc_align_1way_1shot_[train].sh
