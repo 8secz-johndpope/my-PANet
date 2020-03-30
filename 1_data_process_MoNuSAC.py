@@ -26,7 +26,6 @@ import warnings
 import random
 warnings.filterwarnings('ignore')
 
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 # Helpers
 
