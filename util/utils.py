@@ -15,7 +15,7 @@ def set_seed(seed):
 CLASS_LABELS = {
     'VOC': {
         'all': set(range(1, 21)),
-        0: set(range(1, 5)),
+        0: set(range(1, 2)),
         1: set(range(1, 21)) - set(range(6, 11)),
         2: set(range(1, 21)) - set(range(11, 16)),
         3: set(range(1, 21)) - set(range(16, 21)),
